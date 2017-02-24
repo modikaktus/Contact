@@ -42,5 +42,11 @@ public final class Date {
     public static boolean isValid(String dateTimeString) {
         return parse(dateTimeString) != null;
     }
+    
+    public static String dayOfWeek(int day) {
+        DayOfWeek dayOfWeek = DayOfWeek.of(day);
+        String dayString = dayOfWeek.getDisplayName(TextStyle.FULL, Locale.getDefault());
+        return dayString;
+    }
 
 }
